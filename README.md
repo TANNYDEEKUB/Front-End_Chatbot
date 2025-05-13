@@ -1,30 +1,104 @@
-# React + TypeScript + Vite
+จากโครงสร้างโปรเจกต์ของคุณซึ่งเป็น React + TypeScript ที่ใช้ Vite และ TailwindCSS ผมได้ร่าง `README.md` ใหม่ให้พร้อมใช้งานแบบชัดเจน ดังนี้:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+```markdown
+# 🧠 Chatbot Frontend (React + TypeScript + Vite)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Frontend application for interacting with an AI chatbot API. Built with modern tooling including **Vite**, **React 18**, **TypeScript**, and **Tailwind CSS**.
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- ⚡ Fast build and development with **Vite**
+- 🎨 Responsive UI styled with **Tailwind CSS**
+- 🤖 Chat interface using **React**
+- 🌐 Routing with **React Router**
+- 🔧 Type-safe codebase with **TypeScript**
+- 📦 Icon support from Font Awesome
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠 Tech Stack
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- [React 18](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/)
+- [Font Awesome](https://fontawesome.com/)
+- [React Router DOM](https://reactrouter.com/)
+
+## 📁 Project Structure
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── src/
+├── index.tsx        # React entry point
+├── App.tsx          # Main App component
+├── components/      # Reusable components
+└── pages/           # Route-level components (e.g., ChatPage)
+
+````
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/chatbot-frontend.git
+cd chatbot-frontend
+npm install
+````
+
+## 🔧 Running the App
+
+Start local development server with hot reload:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 🧑‍💻 Development Notes
+
+* Update Tailwind settings in `tailwind.config.js`
+* Modify Vite settings in `vite.config.ts`
+* Environment variables can be set in a `.env` file if needed
+
+## 📬 API Integration
+
+You can connect this frontend to a backend API (e.g., Node.js + Express) that provides chatbot functionality. Use `axios` in your components to interact with endpoints such as:
+
+* `POST /api/chat/message`
+* `POST /api/auth/login`
+* `POST /api/auth/register`
+
+## 📄 License
+
+MIT License © 2025
+
+---
+
+## 🙌 Acknowledgments
+
+* [Vite](https://vitejs.dev/)
+* [React](https://reactjs.org/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Font Awesome](https://fontawesome.com/)
+
+```
+

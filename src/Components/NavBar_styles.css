@@ -1,0 +1,249 @@
+/* Light Mode (default) */
+body {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2.5rem;
+  background-color: #ffffff;
+  color: #333333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #f0f0f0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar title */
+.navbar h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar h1:hover {
+  color: #5b8def;
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.profile-icon {
+  color: #000000;
+  font-size: 1.5rem;
+  transition: color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.profile-icon:hover {
+  color: #3a78d5;
+  transform: scale(0.9);
+  box-shadow: 0 4px 8px rgba(253, 252, 252, 0.2);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 3.5rem;
+  right: 0;
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  padding: 0.75rem 0;
+  z-index: 200;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  transform: translateX(10px);
+}
+
+.dropdown-item svg {
+  margin-right: 10px;
+  color: #666666;
+  transition: color 0.3s ease;
+}
+
+.dropdown-item:hover svg {
+  color: #5b8def;
+}
+
+/* Help menu */
+#help-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#help-menu a {
+  padding: 0.25rem;
+  background-color: transparent;
+  color: #333333;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+#help-menu a:hover,
+#help-menu button:hover {
+  color: #5b8def;
+  background-color: rgba(0, 0, 0, 0.05);
+ 
+}
+
+/* Night Mode */
+body.night-mode {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.night-mode .navbar {
+  background-color: #333333;
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #444444;
+}
+
+body.night-mode .navbar h1 {
+  color: #e0e0e0;
+}
+
+body.night-mode .navbar:hover {
+  background-color: #444444;
+}
+
+body.night-mode .profile-icon {
+  color: #e0e0e0;
+}
+
+body.night-mode .dropdown-menu {
+  background-color: #444444;
+  color: #e0e0e0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+body.night-mode .dropdown-item {
+  background-color: transparent;
+  color: #e0e0e0;
+}
+
+body.night-mode .dropdown-item:hover {
+  background-color: #555555;
+}
+
+body.night-mode #help-menu a,
+body.night-mode #help-menu button {
+  color: #e0e0e0;
+}
+
+body.night-mode #help-menu a:hover,
+body.night-mode #help-menu button:hover {
+  color: #5b8def;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Toggle Theme Switch (iOS-style) */
+.theme-toggle-switch {
+  width: 56px;
+  height: 32px;
+  border-radius: 9999px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ชิดซ้ายโดย default */
+  background-color: #facc15; /* Light mode สีเหลือง */
+  transition: background-color 0.3s ease, justify-content 0.3s ease;
+  cursor: pointer;
+}
+
+.theme-toggle-switch.light {
+  background-color: #facc15; /* yellow-400 */
+}
+
+.theme-toggle-switch.dark {
+  background-color: #374151; /* gray-700 */
+}
+
+.theme-toggle-circle {
+  background-color: white;
+  height: 24px; /* h-6 */
+  width: 24px; /* เปลี่ยนจาก w-1 (4px) → w-6 = 24px เพื่อให้เห็นเป็นวงกลม */
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-circle.light {
+  transform: translateX(0);
+  color: #055cd5; /* gray-700 */
+}
+
+.theme-toggle-circle.dark {
+  transform: translateX(24px);
+  color: #facc15; /* yellow-300 */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #help-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .toggle-theme-btn {
+    margin-left: auto;
+  }
+}
